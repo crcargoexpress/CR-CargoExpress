@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Cargo Express | Tu Casillero en Miami a Costa Rica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            dark: '#0f172a',
+                            accent: '#06b6d4',
+                            highlight: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <nav class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="CR CargoExpress Logo.JPG" alt="CR Cargo Express Logo" class="h-12 w-auto object-contain">
+                    <div>
+                        <span class="text-2xl font-extrabold text-brand-900 tracking-tight">CR Cargo<span class="text-brand-accent">Express</span></span>
+                        <span class="block text-xs font-semibold text-slate-500 tracking-wider uppercase">Miami ➔ Costa Rica</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#calculadora" class="hover:text-brand-600 transition">Calculadora</a>
+                    <a href="#como-funciona" class="hover:text-brand-600 transition">¿Cómo Funciona?</a>
+                    <a href="#direccion" class="hover:text-brand-600 transition">Dirección Miami</a>
+                    <a href="#beneficios" class="hover:text-brand-600 transition">Ventajas</a>
+                </div>
+
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/50671009662?text=Hola,%20quiero%20abrir%20mi%20casillero%20gratis" target="_blank" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-2.5 rounded-xl transition shadow-md hover:shadow-lg flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Abrir Casillero Gratis</span>
+                    </a>
+                </div>
+
+                <!-- Botón de menú móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-brand-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#calculadora" class="block py-2 text-slate-700 font-medium">Calculadora</a>
+            <a href="#como-funciona" class="block py-2 text-slate-700 font-medium">¿Cómo Funciona?</a>
+            <a href="#direccion" class="block py-2 text-slate-700 font-medium">Dirección Miami</a>
+            <a href="#beneficios" class="block py-2 text-slate-700 font-medium">Ventajas</a>
+            <a href="https://wa.me/50671009662?text=Hola,%20quiero%20abrir%20mi%20casillero%20gratis" target="_blank" class="w-full bg-brand-600 text-white font-bold py-3 rounded-xl text-center block shadow-md">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Abrir Casillero Gratis
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative bg-gradient-to-b from-brand-900 via-brand-800 to-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#06b6d4_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-accent/30 text-brand-accent px-4 py-1.5 rounded-full text-sm font-medium">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse"></span>
+                        Servicio de Compras e Importación Directa
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Tus compras de USA <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-teal-300 to-white">en la puerta de tu casa</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Compra en Amazon, Shein, eBay o Walmart y tráelo a Costa Rica con la tarifa más competitiva del mercado: <strong class="text-white font-semibold">$8.00 USD por libra (Todo Incluido)</strong>. Sin cargos ocultos y entregas en todo el país.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#direccion" class="bg-gradient-to-r from-brand-accent to-brand-500 text-brand-dark font-bold px-8 py-4 rounded-xl shadow-lg hover:brightness-110 transition flex items-center justify-center gap-2 text-lg">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <span>Obtener Mi Dirección Miami</span>
+                        </a>
+                        <a href="#calculadora" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition flex items-center justify-center gap-2 text-lg">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Calcular Costo Envío</span>
+                        </a>
+                    </div>
+
+                    <!-- Métricas rápidas -->
+                    <div class="pt-6 border-t border-slate-700/60 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-extrabold text-white">$8.00 USD</p>
+                            <p class="text-xs text-slate-400">Tarifa Todo Incluido x Libra</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-extrabold text-brand-accent">8-12 Días</p>
+                            <p class="text-xs text-slate-400">Tiempo de Tránsito</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-extrabold text-white">100%</p>
+                            <p class="text-xs text-slate-400">Cobertura Nacional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Promocional en Hero -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card text-slate-800 p-8 rounded-3xl shadow-2xl border border-white/20 relative">
+                        <div class="absolute -top-4 -right-4 bg-emerald-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                            ¡NUEVO SERVICIO!
+                        </div>
+                        
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="bg-brand-100 p-3.5 rounded-2xl text-brand-600">
+                                <i class="fa-solid fa-shield-halved text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900">Casillero Seguro & Rápido</h3>
+                                <p class="text-sm text-slate-500">Sin mensualidad ni membresías</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-sm font-medium text-slate-600 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-accent text-base mt-0.5"></i>
+                                <span><strong>Dirección física real en Miami, Florida</strong> para todas tus compras.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-accent text-base mt-0.5"></i>
+                                <span>Notificación inmediata por WhatsApp (+506 7100 9662) cuando llegue tu paquete.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-accent text-base mt-0.5"></i>
+                                <span>Entregas a domicilio en GAM y por Correos de Costa Rica a Provincias.</span>
+                            </li>
+                        </ul>
+
+                        <div class="bg-slate-100 p-4 rounded-2xl text-center">
+                            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">¿Necesitas ayuda comprando?</p>
+                            <p class="text-sm font-bold text-slate-800 mt-0.5">¡Nosotros compramos por ti si no tienes tarjeta!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Calculadora Transparente de Envío</h2>
+                <p class="mt-4 text-lg text-slate-600">Calcula el costo total de tu paquete desde Miami hasta Costa Rica. Nuestra tarifa plana de $8.00 USD por libra incluye todos los impuestos y flete.</p>
+            </div>
+
+            <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Inputs de la calculadora -->
+                <div class="md:col-span-7 space-y-6">
+                    <div>
+                        <label for="weight-input" class="block text-sm font-bold text-slate-700 mb-2">
+                            Peso aproximado del paquete (Libras)
+                        </label>
+                        <div class="relative rounded-2xl shadow-sm">
+                            <input type="number" id="weight-input" min="1" value="2" step="0.5" class="w-full text-2xl font-extrabold text-slate-900 bg-white border border-slate-300 rounded-2xl py-4 pl-5 pr-16 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition">
+                            <div class="absolute inset-y-0 right-0 pr-5 flex items-center pointer-events-none">
+                                <span class="text-slate-400 font-bold">LBS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl">
+                        <p class="text-xs text-emerald-900 font-medium leading-relaxed">
+                            <i class="fa-solid fa-circle-check mr-1 text-emerald-600"></i>
+                            <strong>Tarifa Todo Incluido:</strong> $8.00 USD por libra (Mínimo 1 libra). Incluye flete e impuestos aduanales sin cargos sorpresa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Resultado desglosado -->
+                <div class="md:col-span-5 bg-brand-dark text-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-700 flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-xs font-bold text-brand-accent uppercase tracking-widest">Resumen del Cálculo</span>
+                        
+                        <div class="mt-6 space-y-4 text-sm">
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span>Tarifa x Libra (<span id="summary-lbs">2</span> lbs x $8.00)</span>
+                                <span class="font-bold text-white" id="flete-cost">$16.00 USD</span>
+                            </div>
+
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span>Impuestos y Aduana</span>
+                                <span class="font-bold text-emerald-400">INCLUIDO</span>
+                            </div>
+
+                            <div class="flex justify-between items-center text-slate-300 border-b border-slate-700 pb-3">
+                                <span>Manejo y Recepción local</span>
+                                <span class="font-bold text-emerald-400">GRATIS</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <span class="text-xs text-slate-400 block mb-1">Total a Pagar</span>
+                            <p class="text-4xl font-extrabold text-brand-accent" id="total-usd">$16.00 <span class="text-sm font-normal text-slate-400">USD</span></p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-700/80">
+                        <a id="calc-whatsapp-btn" href="#" target="_blank" class="w-full bg-brand-accent hover:bg-teal-400 text-brand-dark font-extrabold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Cotizar este Envío</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">Proceso Sencillo</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">¿Cómo importar en 4 pasos?</h2>
+                <p class="mt-3 text-slate-600 text-lg">Traer tus compras desde EE.UU. a Costa Rica nunca había sido tan fácil.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Paso 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative group hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 font-extrabold text-xl rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Obtén tu Dirección</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Copia los datos de nuestra dirección de Miami e ingresa tu nombre junto al código casillero obligatorio <strong class="text-amber-600 font-bold">GV22322</strong>.
+                    </p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative group hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 font-extrabold text-xl rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Compra Online</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Usa la dirección de Miami agregando tu nombre y apellido obligatoriamente junto con el código <strong class="text-amber-600 font-bold">GV22322</strong>.
+                    </p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative group hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 font-extrabold text-xl rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Recibimos y Volamos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Recibimos tu paquete en Miami, te notificamos y lo enviamos (tránsito de 8-12 días) hacia Costa Rica.
+                    </p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative group hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-brand-100 text-brand-600 font-extrabold text-xl rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Entrega Final</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Realizamos el trámite aduanal y te entregamos en tu casa u oficina en cualquier parte del país.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="direccion" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">Dirección de Envío</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Formato de Dirección en Miami</h2>
+                <p class="text-slate-600 mt-2">Ingresa tu nombre y apellido para generar y copiar el formato exacto para tus compras online.</p>
+            </div>
+
+            <!-- AVISO DESTACADO DE IMPORTANCIA DEL CÓDIGO -->
+            <div class="mb-8 bg-amber-50 border-2 border-amber-400 text-amber-900 p-5 rounded-2xl shadow-md flex items-start gap-4">
+                <div class="bg-amber-400 text-slate-900 p-3 rounded-xl font-black text-xl flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                    <h4 class="text-base font-extrabold uppercase tracking-wide text-amber-900">¡AVISO MUY IMPORTANTE!</h4>
+                    <p class="text-sm font-medium mt-1 leading-relaxed">
+                        Es <strong>OBLIGATORIO Y REQUISITO INDISPENSABLE</strong> colocar el código <span class="bg-amber-200 px-2 py-0.5 rounded font-black text-amber-900 text-base">GV22322</span> junto a tu nombre y apellido en el campo <em>"Full Name"</em> de la tienda online (Ejemplo: <strong class="underline">Diego Rodríguez GV22322</strong>). De lo contrario, no podremos identificar tu paquete ni realizar el envío a Costa Rica.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-slate-800">
+                <div class="mb-6">
+                    <label class="block text-xs uppercase font-bold text-brand-accent tracking-wider mb-2">Ingresa tu Nombre y Apellido:</label>
+                    <input type="text" id="user-name-input" placeholder="Ej. Diego Rodríguez" value="Diego Rodríguez" class="w-full bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-xl focus:ring-2 focus:ring-brand-accent outline-none font-medium">
+                </div>
+
+                <div class="space-y-4 bg-slate-950/70 p-6 rounded-2xl border border-slate-800 text-sm font-mono">
+                    <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                        <span class="text-slate-400">Full Name:</span>
+                        <span class="font-bold text-amber-400 text-base" id="addr-name">Diego Rodríguez GV22322</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                        <span class="text-slate-400">Address Line 1:</span>
+                        <span class="font-bold text-white">6315 NW 99th Avenue</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                        <span class="text-slate-400">City:</span>
+                        <span class="font-bold text-white">Miami</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                        <span class="text-slate-400">State / Zip Code:</span>
+                        <span class="font-bold text-white">Florida (FL), 33178-2719</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                        <span class="text-slate-400">Country:</span>
+                        <span class="font-bold text-white">Estados Unidos (United States)</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-slate-400">Phone Number:</span>
+                        <span class="font-bold text-white">+1 (786) 536-9433</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                    <button id="copy-address-btn" class="flex-1 bg-brand-600 hover:bg-brand-500 text-white font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="copy-text">Copiar Dirección Completa</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">¿Por qué elegir CR Cargo Express?</h2>
+                <p class="mt-4 text-slate-400 text-lg">Nos encargamos de toda la logística para que tú solo disfrutes tus compras.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-800/60 border border-slate-700/60 p-8 rounded-2xl hover:border-brand-accent/50 transition">
+                    <div class="w-12 h-12 bg-brand-500/20 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sin Costos Ocultos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Tarifa fija transparente de $8.00 USD por libra todo incluido. No cobramos suscripciones mensuales ni impuestos sorpresa.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/60 border border-slate-700/60 p-8 rounded-2xl hover:border-brand-accent/50 transition">
+                    <div class="w-12 h-12 bg-brand-500/20 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Envíos a todo Costa Rica</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Entregamos en la Gran Área Metropolitana y realizamos envíos seguros a Guanacaste, Puntarenas, Limón y zona rural.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/60 border border-slate-700/60 p-8 rounded-2xl hover:border-brand-accent/50 transition">
+                    <div class="w-12 h-12 bg-brand-500/20 text-brand-accent rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Atención Directa y Humana</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Atención inmediata por WhatsApp al +506 7100 9662 de manera personalizada para cualquier consulta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <img src="CR CargoExpress Logo.JPG" alt="CR Cargo Express Logo" class="h-10 w-auto object-contain">
+                    <span class="text-xl font-extrabold text-white tracking-tight">CR Cargo Express</span>
+                </div>
+                
+                <p class="text-xs text-center md:text-left">
+                    © 2026 CR Cargo Express. Todos los derechos reservados. Servicio de Casillero e Importación Miami ➔ Costa Rica.
+                </p>
+
+                <div class="flex space-x-6 text-slate-400 text-lg">
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/cr_cargo_express/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/50671009662" target="_blank" class="hover:text-emerald-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/50671009662?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20casillero" target="_blank" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center transition hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Constantes
+            const RATE_PER_LB = 8.00;
+
+            // Elementos Calculadora
+            const weightInput = document.getElementById('weight-input');
+            const summaryLbs = document.getElementById('summary-lbs');
+            const fleteCost = document.getElementById('flete-cost');
+            const totalUsd = document.getElementById('total-usd');
+            const calcWhatsappBtn = document.getElementById('calc-whatsapp-btn');
+
+            // Función de cálculo
+            function calculateTotal() {
+                let lbs = parseFloat(weightInput.value) || 1;
+                if (lbs < 1) lbs = 1; // Mínimo 1 libra
+
+                const grandTotalUsd = lbs * RATE_PER_LB;
+
+                // Actualizar interfaz
+                summaryLbs.textContent = lbs;
+                fleteCost.textContent = `$${grandTotalUsd.toFixed(2)} USD`;
+                totalUsd.innerHTML = `$${grandTotalUsd.toFixed(2)} <span class="text-sm font-normal text-slate-400">USD</span>`;
+
+                // Actualizar enlace WhatsApp
+                const textMsg = encodeURIComponent(`Hola! Me gustaría cotizar un envío de aproximadamente ${lbs} lbs (Costo estimado: $${grandTotalUsd.toFixed(2)} USD).`);
+                calcWhatsappBtn.href = `https://wa.me/50671009662?text=${textMsg}`;
+            }
+
+            weightInput.addEventListener('input', calculateTotal);
+            calculateTotal(); // Ejecución inicial
+
+            // Generador de Dirección y Copiar
+            const userNameInput = document.getElementById('user-name-input');
+            const addrName = document.getElementById('addr-name');
+            const copyBtn = document.getElementById('copy-address-btn');
+            const copyText = document.getElementById('copy-text');
+
+            userNameInput.addEventListener('input', function() {
+                const name = this.value.trim() || 'Diego Rodríguez';
+                addrName.textContent = `${name} GV22322`;
+            });
+
+            copyBtn.addEventListener('click', function() {
+                const name = userNameInput.value.trim() || 'Diego Rodríguez';
+                const fullAddress = `Full Name: ${name} GV22322\nAddress Line 1: 6315 NW 99th Avenue\nCity: Miami\nState/Zip: FL 33178-2719\nCountry: United States\nPhone: +1 (786) 536-9433`;
+
+                // Método fallback para iFrames / navegadores
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = fullAddress;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextarea);
+
+                copyText.textContent = "¡Copiado con Éxito!";
+                copyBtn.classList.remove('bg-brand-600');
+                copyBtn.classList.add('bg-emerald-600');
+
+                setTimeout(() => {
+                    copyText.textContent = "Copiar Dirección Completa";
+                    copyBtn.classList.remove('bg-emerald-600');
+                    copyBtn.classList.add('bg-brand-600');
+                }, 2500);
+            });
+
+            // Menú Móvil
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
